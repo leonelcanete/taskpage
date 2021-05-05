@@ -10,7 +10,7 @@ const Taskcontent = ({search, selected_cat, searchCategories}) => {
             {tasks.filter(task => {
                 if(task.title === undefined || search === ''){
                     return task
-                } else if(task.title.toLowerCase().includes(search.toLowerCase())){
+                } else if(task.title.toLowerCase().replace(/\s+/g, '').includes(search.toLowerCase())){
                     return task
                 }
                 return null}).map((task, index) => {
