@@ -175,10 +175,34 @@ body{
 }
 
 .sidebar-categories-container{
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
   width:95%;
   height:85%;
   border-radius:10px;
   background-color:#023d7d65;
+}
+
+.sidebar-select-categories{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin:10px;
+  width:90%;
+  height:10%;
+  border-radius: 10px;
+  background-color:#2c86e669;
+  text-decoration: underline;
+  color:white;
+}
+
+.sidebar-select-categories:hover{
+  cursor:pointer;
 }
 
 /* ---END SIDEBAR--- */

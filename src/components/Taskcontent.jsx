@@ -3,14 +3,12 @@ import Addtask from './Addtask'
 import Task from './Task';
 
 
-const Taskcontent = ({search}) => {
+const Taskcontent = ({search, selected_cat, searchCategories}) => {
     const {tasks, addNewTask, updateTask} = useLocalStorage('task', []);
     return ( 
         <div className="task-content">
             {tasks.filter(task => {
-                if(task.title === undefined){
-                    return task
-                } else if(search === ''){
+                if(task.title === undefined || search === ''){
                     return task
                 } else if(task.title.toLowerCase().includes(search.toLowerCase())){
                     return task
